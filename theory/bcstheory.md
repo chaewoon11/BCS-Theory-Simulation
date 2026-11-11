@@ -171,3 +171,135 @@ $$
 This is a nonlinear integral equation for $\Delta_{\mathbf{k}}$ with a general kernel $V_{\mathbf{k}\mathbf{l}}$.
 $\Delta_{\mathbf{k}} = 0$ (the normal state) is always a solution; a nontrivial solution requires
 $V_{\mathbf{k}\mathbf{l}}$ to be attractive in at least some channel.
+
+## 4. Finite temperature
+
+At $T > 0$ we need the excited states as well. Following Tinkham, use the mean-field (self-consistent field)
+form of the pairing Hamiltonian and diagonalize it with the Bogoliubov–Valatin transformation.
+
+### Mean-field Hamiltonian
+
+Define the pair amplitude
+
+$$
+b_{\mathbf{k}} \equiv \langle c_{-\mathbf{k}\downarrow} c_{\mathbf{k}\uparrow} \rangle ,
+$$
+
+where $\langle \cdots \rangle$ is the thermal average. Writing
+$c_{-\mathbf{k}\downarrow} c_{\mathbf{k}\uparrow} = b_{\mathbf{k}} + (c_{-\mathbf{k}\downarrow} c_{\mathbf{k}\uparrow} - b_{\mathbf{k}})$
+and dropping terms quadratic in the fluctuation,
+
+$$
+\mathcal{H}_M = \sum_{\mathbf{k}\sigma} \xi_{\mathbf{k}}\, n_{\mathbf{k}\sigma}
++ \sum_{\mathbf{k}\mathbf{l}} V_{\mathbf{k}\mathbf{l}}
+\left( c^{\dagger}_{\mathbf{k}\uparrow} c^{\dagger}_{-\mathbf{k}\downarrow}\, b_{\mathbf{l}}
++ b^{*}_{\mathbf{k}}\, c_{-\mathbf{l}\downarrow} c_{\mathbf{l}\uparrow}
+- b^{*}_{\mathbf{k}} b_{\mathbf{l}} \right).
+$$
+
+### General definition of $\Delta_{\mathbf{k}}$
+
+$$
+\boxed{\ \Delta_{\mathbf{k}} \equiv - \sum_{\mathbf{l}} V_{\mathbf{k}\mathbf{l}}\, b_{\mathbf{l}}
+= - \sum_{\mathbf{l}} V_{\mathbf{k}\mathbf{l}}\, \langle c_{-\mathbf{l}\downarrow} c_{\mathbf{l}\uparrow} \rangle\ }
+$$
+
+This reduces to the definition of Section 3 at $T = 0$, where $b_{\mathbf{l}} = u_{\mathbf{l}} v_{\mathbf{l}}$.
+With $V_{\mathbf{k}\mathbf{l}} = V^{*}_{\mathbf{l}\mathbf{k}}$ (Hermitian),
+
+$$
+\mathcal{H}_M = \sum_{\mathbf{k}\sigma} \xi_{\mathbf{k}}\, n_{\mathbf{k}\sigma}
+- \sum_{\mathbf{k}} \left( \Delta_{\mathbf{k}}\, c^{\dagger}_{\mathbf{k}\uparrow} c^{\dagger}_{-\mathbf{k}\downarrow}
++ \Delta^{*}_{\mathbf{k}}\, c_{-\mathbf{k}\downarrow} c_{\mathbf{k}\uparrow}
+- \Delta_{\mathbf{k}}\, b^{*}_{\mathbf{k}} \right).
+$$
+
+$\mathcal{H}_M$ is bilinear in the electron operators, so it can be diagonalized exactly.
+
+### Bogoliubov–Valatin transformation
+
+Introduce new fermion operators $\gamma_{\mathbf{k}0}, \gamma_{\mathbf{k}1}$:
+
+$$
+c_{\mathbf{k}\uparrow} = u^{*}_{\mathbf{k}}\, \gamma_{\mathbf{k}0} + v_{\mathbf{k}}\, \gamma^{\dagger}_{\mathbf{k}1},
+\qquad
+c^{\dagger}_{-\mathbf{k}\downarrow} = -v^{*}_{\mathbf{k}}\, \gamma_{\mathbf{k}0} + u_{\mathbf{k}}\, \gamma^{\dagger}_{\mathbf{k}1},
+$$
+
+with $|u_{\mathbf{k}}|^2 + |v_{\mathbf{k}}|^2 = 1$ so that the $\gamma$'s obey fermion anticommutation relations.
+$\gamma^{\dagger}_{\mathbf{k}0}$ creates a quasiparticle that carries momentum $\mathbf{k}$ and spin up;
+$\gamma^{\dagger}_{\mathbf{k}1}$ one with $-\mathbf{k}$ and spin down.
+
+Choosing $u_{\mathbf{k}}, v_{\mathbf{k}}$ so that the terms $\gamma^{\dagger}\gamma^{\dagger}$ and $\gamma\gamma$ vanish gives
+
+$$
+|v_{\mathbf{k}}|^2 = \frac{1}{2} \left( 1 - \frac{\xi_{\mathbf{k}}}{E_{\mathbf{k}}} \right),
+\qquad
+|u_{\mathbf{k}}|^2 = \frac{1}{2} \left( 1 + \frac{\xi_{\mathbf{k}}}{E_{\mathbf{k}}} \right),
+\qquad
+u^{*}_{\mathbf{k}} v_{\mathbf{k}} = \frac{\Delta_{\mathbf{k}}}{2E_{\mathbf{k}}},
+$$
+
+$$
+E_{\mathbf{k}} = \sqrt{\xi_{\mathbf{k}}^2 + |\Delta_{\mathbf{k}}|^2} ,
+$$
+
+the same form as at $T = 0$, and
+
+$$
+\mathcal{H}_M = \sum_{\mathbf{k}} \left( \xi_{\mathbf{k}} - E_{\mathbf{k}} + \Delta_{\mathbf{k}} b^{*}_{\mathbf{k}} \right)
++ \sum_{\mathbf{k}} E_{\mathbf{k}} \left( \gamma^{\dagger}_{\mathbf{k}0} \gamma_{\mathbf{k}0}
++ \gamma^{\dagger}_{\mathbf{k}1} \gamma_{\mathbf{k}1} \right).
+$$
+
+The first sum is the condensate energy; the second describes independent quasiparticles with excitation energy
+$E_{\mathbf{k}} \ge |\Delta_{\mathbf{k}}|$, so $|\Delta_{\mathbf{k}}|$ is the energy gap at $\mathbf{k}$.
+
+### Thermal occupation
+
+Since the quasiparticles are independent fermions,
+
+$$
+\langle \gamma^{\dagger}_{\mathbf{k}0} \gamma_{\mathbf{k}0} \rangle
+= \langle \gamma^{\dagger}_{\mathbf{k}1} \gamma_{\mathbf{k}1} \rangle
+= f(E_{\mathbf{k}}) = \frac{1}{e^{\beta E_{\mathbf{k}}} + 1},
+\qquad \beta = \frac{1}{k_B T} .
+$$
+
+Expressing $b_{\mathbf{k}}$ through the $\gamma$'s (terms $\gamma\gamma$, $\gamma^{\dagger}\gamma^{\dagger}$ average to zero):
+
+$$
+b_{\mathbf{k}} = \langle c_{-\mathbf{k}\downarrow} c_{\mathbf{k}\uparrow} \rangle
+= u^{*}_{\mathbf{k}} v_{\mathbf{k}}
+\left\langle 1 - \gamma^{\dagger}_{\mathbf{k}0} \gamma_{\mathbf{k}0} - \gamma^{\dagger}_{\mathbf{k}1} \gamma_{\mathbf{k}1} \right\rangle
+= u^{*}_{\mathbf{k}} v_{\mathbf{k}} \left[ 1 - 2 f(E_{\mathbf{k}}) \right].
+$$
+
+Thermally excited quasiparticles block pair states and reduce the pair amplitude.
+
+### Gap equation at finite $T$
+
+Using $u^{*}_{\mathbf{l}} v_{\mathbf{l}} = \Delta_{\mathbf{l}} / 2E_{\mathbf{l}}$ and
+$1 - 2f(E) = \tanh(\beta E / 2)$:
+
+$$
+\boxed{\ \Delta_{\mathbf{k}} = - \sum_{\mathbf{l}} V_{\mathbf{k}\mathbf{l}}\,
+\frac{\Delta_{\mathbf{l}}}{2E_{\mathbf{l}}} \tanh \frac{\beta E_{\mathbf{l}}}{2},
+\qquad E_{\mathbf{l}} = \sqrt{\xi_{\mathbf{l}}^2 + |\Delta_{\mathbf{l}}|^2}\ }
+$$
+
+- As $T \to 0$, $\tanh(\beta E / 2) \to 1$ and the $T = 0$ gap equation of Section 3 is recovered.
+- $E_{\mathbf{l}}$ itself depends on $\Delta_{\mathbf{l}}$, so the equation must be solved self-consistently at each $T$,
+  giving $\Delta_{\mathbf{k}}(T)$.
+- The temperature at which the nontrivial solution disappears is $T_c$.
+
+### Number equation
+
+The chemical potential is fixed by
+
+$$
+\langle N \rangle = \sum_{\mathbf{k}} \left[ 1 - \frac{\xi_{\mathbf{k}}}{E_{\mathbf{k}}} \tanh \frac{\beta E_{\mathbf{k}}}{2} \right] = \bar{N} .
+$$
+
+When the density of states is approximately constant over the energy range where $\Delta_{\mathbf{k}} \neq 0$
+(particle–hole symmetry around the Fermi level), $\mu$ is unchanged from its normal-state value and this equation can be dropped.
