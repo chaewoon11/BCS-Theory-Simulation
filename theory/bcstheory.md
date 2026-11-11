@@ -218,17 +218,17 @@ $\mathcal{H}_M$ is bilinear in the electron operators, so it can be diagonalized
 
 ### Bogoliubov–Valatin transformation
 
-Introduce new fermion operators $\gamma_{\mathbf{k}0}, \gamma_{\mathbf{k}1}$:
+Introduce new fermion operators $\gamma_{\mathbf{k}\uparrow}, \gamma_{-\mathbf{k}\downarrow}$:
 
 $$
-c_{\mathbf{k}\uparrow} = u^{*}_{\mathbf{k}}\, \gamma_{\mathbf{k}0} + v_{\mathbf{k}}\, \gamma^{\dagger}_{\mathbf{k}1},
+c_{\mathbf{k}\uparrow} = u^{*}_{\mathbf{k}}\, \gamma_{\mathbf{k}\uparrow} + v_{\mathbf{k}}\, \gamma^{\dagger}_{-\mathbf{k}\downarrow},
 \qquad
-c^{\dagger}_{-\mathbf{k}\downarrow} = -v^{*}_{\mathbf{k}}\, \gamma_{\mathbf{k}0} + u_{\mathbf{k}}\, \gamma^{\dagger}_{\mathbf{k}1},
+c^{\dagger}_{-\mathbf{k}\downarrow} = -v^{*}_{\mathbf{k}}\, \gamma_{\mathbf{k}\uparrow} + u_{\mathbf{k}}\, \gamma^{\dagger}_{-\mathbf{k}\downarrow},
 $$
 
 with $|u_{\mathbf{k}}|^2 + |v_{\mathbf{k}}|^2 = 1$ so that the $\gamma$'s obey fermion anticommutation relations.
-$\gamma^{\dagger}_{\mathbf{k}0}$ creates a quasiparticle that carries momentum $\mathbf{k}$ and spin up;
-$\gamma^{\dagger}_{\mathbf{k}1}$ one with $-\mathbf{k}$ and spin down.
+$\gamma^{\dagger}_{\mathbf{k}\uparrow}$ creates a quasiparticle that carries momentum $\mathbf{k}$ and spin up;
+$\gamma^{\dagger}_{-\mathbf{k}\downarrow}$ one with $-\mathbf{k}$ and spin down.
 
 Choosing $u_{\mathbf{k}}, v_{\mathbf{k}}$ so that the terms $\gamma^{\dagger}\gamma^{\dagger}$ and $\gamma\gamma$ vanish gives
 
@@ -248,8 +248,8 @@ the same form as at $T = 0$, and
 
 $$
 \mathcal{H}_M = \sum_{\mathbf{k}} \left( \xi_{\mathbf{k}} - E_{\mathbf{k}} + \Delta_{\mathbf{k}} b^{*}_{\mathbf{k}} \right)
-+ \sum_{\mathbf{k}} E_{\mathbf{k}} \left( \gamma^{\dagger}_{\mathbf{k}0} \gamma_{\mathbf{k}0}
-+ \gamma^{\dagger}_{\mathbf{k}1} \gamma_{\mathbf{k}1} \right).
++ \sum_{\mathbf{k}} E_{\mathbf{k}} \left( \gamma^{\dagger}_{\mathbf{k}\uparrow} \gamma_{\mathbf{k}\uparrow}
++ \gamma^{\dagger}_{-\mathbf{k}\downarrow} \gamma_{-\mathbf{k}\downarrow} \right).
 $$
 
 The first sum is the condensate energy; the second describes independent quasiparticles with excitation energy
@@ -260,8 +260,8 @@ $E_{\mathbf{k}} \ge |\Delta_{\mathbf{k}}|$, so $|\Delta_{\mathbf{k}}|$ is the en
 Since the quasiparticles are independent fermions,
 
 $$
-\langle \gamma^{\dagger}_{\mathbf{k}0} \gamma_{\mathbf{k}0} \rangle
-= \langle \gamma^{\dagger}_{\mathbf{k}1} \gamma_{\mathbf{k}1} \rangle
+\langle \gamma^{\dagger}_{\mathbf{k}\uparrow} \gamma_{\mathbf{k}\uparrow} \rangle
+= \langle \gamma^{\dagger}_{-\mathbf{k}\downarrow} \gamma_{-\mathbf{k}\downarrow} \rangle
 = f(E_{\mathbf{k}}) = \frac{1}{e^{\beta E_{\mathbf{k}}} + 1},
 \qquad \beta = \frac{1}{k_B T} .
 $$
@@ -271,7 +271,7 @@ Expressing $b_{\mathbf{k}}$ through the $\gamma$'s (terms $\gamma\gamma$, $\gamm
 $$
 b_{\mathbf{k}} = \langle c_{-\mathbf{k}\downarrow} c_{\mathbf{k}\uparrow} \rangle
 = u^{*}_{\mathbf{k}} v_{\mathbf{k}}
-\left\langle 1 - \gamma^{\dagger}_{\mathbf{k}0} \gamma_{\mathbf{k}0} - \gamma^{\dagger}_{\mathbf{k}1} \gamma_{\mathbf{k}1} \right\rangle
+\left\langle 1 - \gamma^{\dagger}_{\mathbf{k}\uparrow} \gamma_{\mathbf{k}\uparrow} - \gamma^{\dagger}_{-\mathbf{k}\downarrow} \gamma_{-\mathbf{k}\downarrow} \right\rangle
 = u^{*}_{\mathbf{k}} v_{\mathbf{k}} \left[ 1 - 2 f(E_{\mathbf{k}}) \right].
 $$
 
