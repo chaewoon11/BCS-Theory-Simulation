@@ -1,9 +1,8 @@
 # BCS Theory
 
-Notation follows M. Tinkham, *Introduction to Superconductivity* (2nd ed.).
-(Tinkham writes creation operators as $`c^{*}`$; here we use $`c^{\dagger}`$.)
+Main reference: M. Tinkham, *Introduction to Superconductivity* (2nd ed.).
 
-## 1. BCS Hamiltonian (pairing Hamiltonian)
+## 1. BCS Hamiltonian 
 
 BCS theory starts from a reduced Hamiltonian that keeps only the interaction between
 electron pairs with opposite momentum and spin, $`(\mathbf{k}\uparrow, -\mathbf{k}\downarrow)`$.
@@ -26,7 +25,7 @@ c_{-\mathbf{l}\downarrow} c_{\mathbf{l}\uparrow}
 - Second term: pair scattering $`(\mathbf{l}\uparrow, -\mathbf{l}\downarrow) \to (\mathbf{k}\uparrow, -\mathbf{k}\downarrow)`$,
   with momentum transfer $`\mathbf{q} = \mathbf{k} - \mathbf{l}`$.
 
-**Sign convention:** $`V_{\mathbf{k}\mathbf{l}} < 0`$ is **attractive**.
+$`V_{\mathbf{k}\mathbf{l}} < 0`$ means attractive interation.
 
 ### Form including the chemical potential
 
@@ -46,7 +45,7 @@ c^{\dagger}_{\mathbf{k}\uparrow} c^{\dagger}_{-\mathbf{k}\downarrow}
 c_{-\mathbf{l}\downarrow} c_{\mathbf{l}\uparrow} .
 ```
 
-> In this project, $`V_{\mathbf{k}\mathbf{l}}`$ is kept in a general form rather than fixed to the textbook constant approximation.
+> In this project, $`V_{\mathbf{k}\mathbf{l}}`$ is kept in a general form rather than approximating it as constant.
 
 ## 2. BCS ground state ansatz
 
@@ -113,7 +112,7 @@ W = 2 \sum_{\mathbf{k}} \xi_{\mathbf{k}}\, v_{\mathbf{k}}^2
 The terms with $`\mathbf{k} = \mathbf{l}`$ that are not of pair-scattering form (Hartree-like terms) are omitted;
 they only shift $`\xi_{\mathbf{k}}`$ and can be absorbed into it.
 
-Following Tinkham, the constraint $`u_{\mathbf{k}}^2 + v_{\mathbf{k}}^2 = 1`$ is built in by
+$`u_{\mathbf{k}}^2 + v_{\mathbf{k}}^2 = 1`$ is built in by
 
 ```math
 u_{\mathbf{k}} = \sin\theta_{\mathbf{k}}, \qquad v_{\mathbf{k}} = \cos\theta_{\mathbf{k}} ,
