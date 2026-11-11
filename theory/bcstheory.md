@@ -93,3 +93,81 @@ $$
 
 and $\mu$ in $\mathcal{H} - \mu N$ is chosen so that $\langle N \rangle$ equals the actual electron number $\bar{N}$.
 For macroscopic $\bar{N}$ the relative fluctuation $\delta N / \bar{N} \sim \bar{N}^{-1/2}$ is negligible.
+
+## 3. Variational solution at $T = 0$ and the gap $\Delta_{\mathbf{k}}$
+
+The coefficients $u_{\mathbf{k}}, v_{\mathbf{k}}$ are fixed by minimizing
+$W \equiv \langle \psi_G | \mathcal{H} - \mu N | \psi_G \rangle$.
+
+### Variational energy
+
+Set the common phase $\varphi = 0$, so $u_{\mathbf{k}}$ and $v_{\mathbf{k}}$ are real
+(with general $V_{\mathbf{k}\mathbf{l}}$, $\Delta_{\mathbf{k}}$ below is then real but may change sign over $\mathbf{k}$).
+Then
+
+$$
+W = 2 \sum_{\mathbf{k}} \xi_{\mathbf{k}}\, v_{\mathbf{k}}^2
++ \sum_{\mathbf{k}\mathbf{l}} V_{\mathbf{k}\mathbf{l}}\, u_{\mathbf{k}} v_{\mathbf{k}} u_{\mathbf{l}} v_{\mathbf{l}} .
+$$
+
+The terms with $\mathbf{k} = \mathbf{l}$ that are not of pair-scattering form (Hartree-like terms) are omitted;
+they only shift $\xi_{\mathbf{k}}$ and can be absorbed into it.
+
+Following Tinkham, the constraint $u_{\mathbf{k}}^2 + v_{\mathbf{k}}^2 = 1$ is built in by
+
+$$
+u_{\mathbf{k}} = \sin\theta_{\mathbf{k}}, \qquad v_{\mathbf{k}} = \cos\theta_{\mathbf{k}} ,
+$$
+
+which gives
+
+$$
+W = \sum_{\mathbf{k}} \xi_{\mathbf{k}} \left( 1 + \cos 2\theta_{\mathbf{k}} \right)
++ \frac{1}{4} \sum_{\mathbf{k}\mathbf{l}} V_{\mathbf{k}\mathbf{l}}\, \sin 2\theta_{\mathbf{k}} \sin 2\theta_{\mathbf{l}} .
+$$
+
+### Minimization
+
+$\partial W / \partial \theta_{\mathbf{k}} = 0$ gives (using $V_{\mathbf{k}\mathbf{l}} = V_{\mathbf{l}\mathbf{k}}$)
+
+$$
+\tan 2\theta_{\mathbf{k}} = \frac{\sum_{\mathbf{l}} V_{\mathbf{k}\mathbf{l}} \sin 2\theta_{\mathbf{l}}}{2 \xi_{\mathbf{k}}} .
+$$
+
+### Definition of $\Delta_{\mathbf{k}}$ and $E_{\mathbf{k}}$
+
+$$
+\boxed{\ \Delta_{\mathbf{k}} \equiv - \sum_{\mathbf{l}} V_{\mathbf{k}\mathbf{l}}\, u_{\mathbf{l}} v_{\mathbf{l}}
+= - \frac{1}{2} \sum_{\mathbf{l}} V_{\mathbf{k}\mathbf{l}} \sin 2\theta_{\mathbf{l}}\ }
+\qquad
+E_{\mathbf{k}} \equiv \sqrt{\xi_{\mathbf{k}}^2 + \Delta_{\mathbf{k}}^2}
+$$
+
+Then $\tan 2\theta_{\mathbf{k}} = -\Delta_{\mathbf{k}} / \xi_{\mathbf{k}}$, so
+
+$$
+2 u_{\mathbf{k}} v_{\mathbf{k}} = \sin 2\theta_{\mathbf{k}} = \frac{\Delta_{\mathbf{k}}}{E_{\mathbf{k}}},
+\qquad
+u_{\mathbf{k}}^2 - v_{\mathbf{k}}^2 = -\cos 2\theta_{\mathbf{k}} = \frac{\xi_{\mathbf{k}}}{E_{\mathbf{k}}},
+$$
+
+$$
+v_{\mathbf{k}}^2 = \frac{1}{2} \left( 1 - \frac{\xi_{\mathbf{k}}}{E_{\mathbf{k}}} \right),
+\qquad
+u_{\mathbf{k}}^2 = \frac{1}{2} \left( 1 + \frac{\xi_{\mathbf{k}}}{E_{\mathbf{k}}} \right).
+$$
+
+The sign is chosen so that $v_{\mathbf{k}}^2 \to 1$ deep below the Fermi level ($\xi_{\mathbf{k}} \to -\infty$).
+
+### Gap equation ($T = 0$)
+
+Substituting $u_{\mathbf{l}} v_{\mathbf{l}} = \Delta_{\mathbf{l}} / 2E_{\mathbf{l}}$ back into the definition of $\Delta_{\mathbf{k}}$:
+
+$$
+\Delta_{\mathbf{k}} = - \frac{1}{2} \sum_{\mathbf{l}} V_{\mathbf{k}\mathbf{l}}\,
+\frac{\Delta_{\mathbf{l}}}{\sqrt{\xi_{\mathbf{l}}^2 + \Delta_{\mathbf{l}}^2}} .
+$$
+
+This is a nonlinear integral equation for $\Delta_{\mathbf{k}}$ with a general kernel $V_{\mathbf{k}\mathbf{l}}$.
+$\Delta_{\mathbf{k}} = 0$ (the normal state) is always a solution; a nontrivial solution requires
+$V_{\mathbf{k}\mathbf{l}}$ to be attractive in at least some channel.
