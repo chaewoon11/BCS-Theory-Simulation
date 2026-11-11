@@ -93,15 +93,3 @@ $$
 
 and $\mu$ in $\mathcal{H} - \mu N$ is chosen so that $\langle N \rangle$ equals the actual electron number $\bar{N}$.
 For macroscopic $\bar{N}$ the relative fluctuation $\delta N / \bar{N} \sim \bar{N}^{-1/2}$ is negligible.
-
-### Normal-state limit
-
-The filled Fermi sea is recovered by
-
-$$
-|v_{\mathbf{k}}| = 1,\ u_{\mathbf{k}} = 0 \quad (k < k_F), \qquad
-|v_{\mathbf{k}}| = 0,\ u_{\mathbf{k}} = 1 \quad (k > k_F).
-$$
-
-In the superconducting state, $|v_{\mathbf{k}}|^2$ is smeared out around $k_F$; its shape is fixed by minimizing
-$\langle \psi_G | \mathcal{H} - \mu N | \psi_G \rangle$ (next section).
